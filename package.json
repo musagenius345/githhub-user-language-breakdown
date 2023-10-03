@@ -1,0 +1,19 @@
+{
+  "name": "github_server",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.10.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "node-github-graphql": "^0.2.7"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
